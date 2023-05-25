@@ -1,0 +1,114 @@
+/* Se le determina el ancho principal a los 3 
+    ademas de el margen para que se mantenga en el centro
+    y ademas que todos los textos se centren*/
+header, section, footer{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* MODIFICACION GENERAL DEL HEADER */
+
+header{
+    background-color: chocolate;
+    height: 50px;
+}
+
+section{
+    height: auto;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+/* NAVEGADOR */
+
+#naveg{
+    height: 80px;
+}
+
+/* SECTION */
+
+#secA{
+    background-color: chartreuse;
+}
+
+#secB{
+    background-color: purple;
+}
+
+/* Esto hace que los titulos no generen un espacio en blanco que realmente es causado por el H2 */
+.titulo_section h2{
+    margin-top: auto;
+}
+
+/* BOX */
+
+.contenedor_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    background-color: gray;
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;
+    /* NO SE UTILIZA EL AUTO PORQUE SI SE DEJA UN BOX VACIO ESTE NO SE MUESTRA
+    height: auto; */
+    margin-left: 12px;
+    margin-right: 12px;
+    /* Esto hace que se centre los textos dentro del bloque o contenedor*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_box{
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: chocolate;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* @media, esta parte del codigo es para ser RESPONSIVE */
+
+@media screen and (min-width: 600px) and (max-width: 1023px){
+
+    header, section, footer{
+        /* Utilizando porcentaje se adapta al 80% de la pantalla del dispositivo, para mi vista es mejor */
+        width: 80%;
+    }
+
+    /* Se agrego un margen abajo porque las box se acomodan 2 arriba y 2 abajo,
+    por lo que es necesario el margen para que no se vean juntos */
+    .box{
+        margin-bottom: 25px;
+        /* SE ELIMINA EL ALTO PARA QUE SE ADAPTE AL TEXTO QUE SE ENCUENTRE DENTRO CON UN AUTO*/
+        height: auto;
+    }
+    
+}
+
+
+@media screen and (max-width: 599px) {
+
+    header, section, footer{
+        width: 80%;
+    }
+
+    .box{
+        margin-bottom: 25px;
+        height: auto;
+    }
+
+}
